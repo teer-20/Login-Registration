@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Queries>
+	<RegisterEmployee>
+		<![CDATA[
+		INSERT INTO LoginRegstn (EmployeeName, Mobile, Email,Password,Gender, DoB,IsActive,Role)  VALUES (@EmployeeName,@Mobile,@Email,@Password,@Gender,@DoB,@IsActive,@Role);		
+
+	]]>
+	</RegisterEmployee>
+<LoginEmployee>
+		<![CDATA[
+				SELECT * FROM LoginRegstn WHERE (Email=@Email AND Password=@Password AND Role=@Role)
+	]]>
+	</LoginEmployee>
+
+
+	<GetAdmin>
+		<![CDATA[
+			Select * 
+			FROM LoginRegstn;
+				
+	]]>
+	</GetAdmin>
+	<GetUser>
+		<![CDATA[
+			Select * 
+			FROM LoginRegstn;	
+	]]>
+	</GetUser>
+	
+	
+	
+	
+	
+	
+	
+	
+</Queries>
